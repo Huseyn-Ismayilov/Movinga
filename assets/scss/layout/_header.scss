@@ -12,19 +12,25 @@
     .wrapper {
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-between;
     }
     .site_logo {
         display: block;
-        width: 180px;
+    }
+    .contact_link {
+        margin-left: auto;
     }
     .navbar {
         display: flex;
         align-items: center;
         .nav_link {
             font-size: 16px;
-            padding: 12px;
+            padding-left: 24px;
+            display: block;
         }
+    }
+    .contact_link {
+        text-align: right;
+        color: var(--orange);
     }
 }
 .toggle {

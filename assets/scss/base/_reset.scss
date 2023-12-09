@@ -7,7 +7,9 @@
 }
 
 body {
-    font-family: "Inter","Helvetica","Arial",sans-serif;
+    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.43;
 }
 
 body.overflow_hidden {
@@ -64,7 +66,6 @@ img {
     flex-wrap: wrap;
 }
 
-
 h1 {
     font-size: 36px;
     font-weight: 600;
@@ -72,6 +73,12 @@ h1 {
 
 h1,
 h2 {
-    font-family: 'Krub';
+    font-family: "Krub";
     font-weight: 700;
+}
+
+a.link {
+    &:hover {
+        text-decoration: underline;
+    }
 }
