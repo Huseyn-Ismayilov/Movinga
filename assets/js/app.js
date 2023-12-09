@@ -71,10 +71,21 @@ $owl.children().each(function (index) {
 
 $owl.owlCarousel({
 	center: true,
-	items: 3,
 	startPosition: 1,
-	touchDrag: false,
-	mouseDrag: false,
+	smartSpeed: 100,
+
+	responsive: {
+		0: {
+			items: 1.2
+		},
+		576: {
+			items: 2
+		},
+		991: {
+			touchDrag: false,
+			mouseDrag: false,
+		}
+	},
 	onInitialized: function (event) {
 		var $centerSlide = $(event.target).find('.owl-item.center').first().find('.owl-item');
 		var currentPosition = $centerSlide.attr('data-position');
@@ -85,6 +96,6 @@ $owl.owlCarousel({
 });
 
 $(document).on('click', '.owl-item>div', function () {
-	var $speed = 300;
+	var $speed = 200;
 	$owl.trigger('to.owl.carousel', [$(this).data('position'), $speed]);
 });

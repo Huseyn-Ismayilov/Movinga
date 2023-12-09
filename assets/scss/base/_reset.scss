@@ -10,6 +10,7 @@ body {
     font-family: "Inter", "Helvetica", "Arial", sans-serif;
     font-size: 0.875rem;
     line-height: 1.43;
+    
 }
 
 body.overflow_hidden {
@@ -72,8 +73,9 @@ h1 {
 }
 
 h1,
-h2 {
-    font-weight: 700;
+h2,
+h3 {
+    word-break: break-word;
 }
 
 a.link {
