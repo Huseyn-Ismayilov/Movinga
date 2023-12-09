@@ -77,10 +77,11 @@
                 border: 1px solid rgba(0, 0, 0, 0.23);
                 border-radius: 6px;
                 padding: 0 12px;
-                appearance: unset;
                 color: rgba(0, 0, 0, 0.6);
             }
             select {
+                appearance: unset;
+
                 option {
                     padding: 10px;
                 }

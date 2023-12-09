@@ -1289,10 +1289,12 @@ button.swiper-pagination-bullet {
   border: 1px solid rgba(0, 0, 0, 0.23);
   border-radius: 6px;
   padding: 0 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.hero .search_bar .form_wrap select {
   -webkit-appearance: unset;
      -moz-appearance: unset;
           appearance: unset;
-  color: rgba(0, 0, 0, 0.6);
 }
 .hero .search_bar .form_wrap select option {
   padding: 10px;
