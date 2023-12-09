@@ -1,10 +1,10 @@
 .site_header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 98;
     width: 100%;
-    padding: 11px 0;
+    padding: 27px 0;
     transition: 0.1s;
     &.scroll_down {
         top: 0;
@@ -31,16 +31,44 @@
     .contact_link {
         text-align: right;
         color: var(--orange);
+        position: relative;
         p {
             margin-top: 3px;
+            position: absolute;
+            right: 0;
+        }
+        .btn {
+            padding: 7px 14px;
         }
     }
 }
 .top_header {
     text-align: right;
+    padding: 14px 0;
     .top_links {
-        a {
+        display: inline-flex;
+        align-items: center;
+        .link_item {
             color: rgb(107, 113, 128);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            &:not(:last-child) {
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
+                padding-right: 16px;
+                margin-right: 16px;
+            }
+        }
+        .language_select {
+            .trigger {
+                display: flex;
+                align-items: center;
+                color: rgb(107, 113, 128);
+                font-weight: 500;
+                svg {
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -277,5 +305,8 @@
         .site_logo {
             width: 100px;
         }
+    }
+    .top_header {
+        display: none;
     }
 }

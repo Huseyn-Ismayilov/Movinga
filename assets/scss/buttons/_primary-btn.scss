@@ -11,14 +11,14 @@
         border-color: var(--orange);
         color: var(--orange);
         &:hover {
-            background-color: rgba(0, 0, 0, 0.06);
+            background-color: rgba(0, 0, 0, 0.04);
         }
     }
     &.secondary_btn {
-        background-color: var(--yellow);
+        background-color: var(--orange);
         color: white;
         &:hover {
-            background-color: #d99903;
+            background-color: #FF5620;
         }
     }
 }
