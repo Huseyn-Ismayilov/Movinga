@@ -485,7 +485,7 @@
                 align-items: center;
                 gap: 8px;
                 .icon {
-                    background-color: #F0F2F5;
+                    background-color: #f0f2f5;
                     width: 40px;
                     height: 40px;
                     display: flex;
@@ -502,7 +502,7 @@
         }
     }
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
     .content_block {
         margin: 50px 0;
         .col {
@@ -511,13 +511,144 @@
         .sec_title {
             text-align: center !important;
         }
-        .image{
+        .image {
             display: none;
         }
         .content {
             .list {
                 li {
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+.trust_pilot {
+    .wrapper {
+        background-image: url(../images/1644403339-mov_bg_couple_with-boxes_01_logo.webp);
+        background-position: center;
+        background-size: cover;
+        justify-content: space-between;
+        padding: 72px 32px;
+    }
+    .left_block {
+        align-self: flex-end;
+    }
+    .right_box {
+        width: 100%;
+        max-width: 316px;
+        > div {
+            &:first-child {
+                text-align: center;
+                padding: 8px 16px 8px;
+                background: rgba(239, 239, 239, 0.3) 0% 68% no-repeat padding-box;
+                border-radius: 10px 10px 0px 0px;
+                backdrop-filter: blur(28px);
+            }
+            &:last-child {
+                background-color: white;
+                width: 100%;
+                padding: 8px 16px 0px;
+                text-align: center;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+        h6 {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--orange);
+            text-transform: uppercase;
+        }
+        .logo {
+            display: inline-block;
+        }
+    }
+    .widget_wrapper {
+        text-align: center;
+        .info {
+            border-bottom: 1px solid rgba(25, 25, 25, 0.2);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            p {
+                font-weight: 400;
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .reviews {
+        text-align: left;
+        > span {
+            color: rgba(25, 25, 25, 0.6);
+        }
+    }
+    .slider {
+        position: relative;
+        overflow: hidden;
+        .owl-stage {
+            display: flex;
+        }
+        .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .text {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        .author {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(25, 25, 25, 0.6);
+            span {
+                font-weight: 500;
+                color: black;
+            }
+        }
+        .owl-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            margin-top: 8px;
+            button {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 1px solid rgba(25, 25, 25, 0.2);
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            pointer-events: none;
+            .owl-dot {
+                background-color: #191919;
+                border-radius: 50%;
+                cursor: pointer;
+                display: inline-block;
+                height: 10px;
+                margin: 2px 4px 0;
+                opacity: 0.3;
+                transition-duration: 0.2s;
+                transition-property: background-color, opacity;
+                transition-timing-function: ease-in-out;
+                padding: 0;
+                width: 10px;
+                &.active {
+                    opacity: 1;
                 }
             }
         }

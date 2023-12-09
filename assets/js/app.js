@@ -102,19 +102,21 @@ $(document).on('click', '.owl-item>div', function () {
 
 // 
 
-$('.trust_pilot .slider').owlCarousel({
+var owl = $('.reviews .slider');
+
+owl.owlCarousel({
 	items: 1,
 	smartSpeed: 800,
 	nav: false,
-	dots: true
+	dots: true, 
 });
 
 // Custom navigation events
-$('.owl-prev').click(function () {
-	$('.trust_pilot .slider').trigger('prev_arrow');
+$('.slider .owl-prev').click(function () {
+	owl.trigger('prev.owl.carousel');
 });
 
-$('.owl-next').click(function () {
-	$('.trust_pilot .slider').trigger('next_arrow');
+$('.slider .owl-next').click(function () {
+	owl.trigger('next.owl.carousel');
 });
 
