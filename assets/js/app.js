@@ -50,19 +50,39 @@ $('.top_header .language_select .trigger').click(function () {
 
 
 
-// var swiper = new Swiper(".content_slider .slider", {
-// 	slidesPerView: 1,
+// var swiper = new Swiper(".our_plans .slider", {
+// 	slidesPerView: 3,
 // 	spaceBetween: 30,
-// 	pagination: {
-// 		el: ".content_slider .swiper-pagination",
-// 		clickable: true,
-// 	},
-// 	navigation: {
-// 		nextEl: ".content_slider .next_arrow ",
-// 		prevEl: ".content_slider .prev_arrow",
-// 	},
+// 	centeredSlides: true,
+
 // });
 
 if ($(window).width() < 576) {
 	$('.site_header .contact_link .btn span').html('Jetzt anfragen')
 }
+
+
+var $owl = $('.owl-carousel');
+
+$owl.children().each(function (index) {
+	$(this).attr('data-position', index);
+});
+
+
+$owl.owlCarousel({
+	center: true,
+	items: 3,
+	startPosition: 1,
+	onInitialized: function (event) {
+		var $centerSlide = $(event.target).find('.owl-item.center').first().find('.owl-item');
+		var currentPosition = $centerSlide.attr('data-position');
+		$owl.trigger('to.owl.carousel', [currentPosition, 0, true]);
+
+		$centerSlide.addClass('center');
+	}
+});
+
+$(document).on('click', '.owl-item>div', function () {
+	var $speed = 300;
+	$owl.trigger('to.owl.carousel', [$(this).data('position'), $speed]);
+});
