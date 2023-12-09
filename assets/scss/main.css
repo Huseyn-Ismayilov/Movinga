@@ -1158,6 +1158,9 @@ button.swiper-pagination-bullet {
   .site_header .site_logo {
     width: 100px;
   }
+  .site_header .contact_link p {
+    display: none;
+  }
   .top_header {
     display: none;
   }
@@ -1321,7 +1324,7 @@ button.swiper-pagination-bullet {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #6B7180;
+  color: #6b7180;
   padding: 6px 16px;
   background-color: #fff;
   border-top-left-radius: 10px;
@@ -1361,4 +1364,24 @@ button.swiper-pagination-bullet {
   .hero .search_bar .reserv_count {
     left: 0;
   }
+}
+.join_us .content {
+  width: 100%;
+  max-width: 25%;
+}
+.join_us .content h1 {
+  font-size: 1.8755rem;
+  font-weight: 800;
+}
+.join_us .images {
+  width: 100%;
+  max-width: 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+.join_us .images img {
+  width: 100%;
+  max-width: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
