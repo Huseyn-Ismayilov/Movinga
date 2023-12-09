@@ -81,6 +81,26 @@ a.link:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 43px;
+  }
+}
+h3 {
+  font-weight: 800;
+  font-size: 1.4375rem;
+}
+
+@media (min-width: 991px) {
+  h3 {
+    font-size: 1.6879rem;
+  }
+}
 .container {
   width: 100%;
   margin: 0 auto;
@@ -124,6 +144,7 @@ a.link:hover {
   padding: 12px 20px;
   font-weight: 600;
   border-radius: 5px;
+  text-align: center;
   border: 1px solid transparent;
 }
 .btn.primary_btn {
@@ -858,6 +879,7 @@ button.swiper-pagination-bullet {
 }
 .site_header .site_logo {
   display: block;
+  flex-shrink: 0;
 }
 .site_header .contact_link {
   margin-left: auto;
@@ -1155,9 +1177,6 @@ button.swiper-pagination-bullet {
   .site_header .navbar {
     display: none;
   }
-  .site_header .site_logo {
-    width: 100px;
-  }
   .site_header .contact_link p {
     display: none;
   }
@@ -1365,6 +1384,12 @@ button.swiper-pagination-bullet {
     left: 0;
   }
 }
+.join_us {
+  padding: 56px 0;
+}
+.join_us .wrapper {
+  align-items: center;
+}
 .join_us .content {
   width: 100%;
   max-width: 25%;
@@ -1377,11 +1402,46 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 75%;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
-.join_us .images img {
-  width: 100%;
-  max-width: 120px;
+.join_us .images > * {
+  width: 120px;
+  max-width: 25%;
   -o-object-fit: contain;
      object-fit: contain;
+  overflow: hidden;
+}
+.join_us .images > *:not(:first-child) {
+  padding-left: 32px;
+}
+.join_us .images .trustPilot {
+  text-align: center;
+}
+.join_us .images .trustPilot a {
+  display: block;
+}
+.join_us .images .trustPilot svg {
+  max-width: 100%;
+  height: auto;
+}
+.join_us .images .trustPilot .tp-stars--4 .tp-star:nth-of-type(-n + 4),
+.join_us .images .trustPilot .tp-star__canvas,
+.join_us .images .trustPilot .tp-stars--4 .tp-star:nth-of-type(-n + 4),
+.join_us .images .trustPilot .tp-star__canvas--half {
+  fill: #73cf11;
+}
+
+@media (max-width: 991px) {
+  .join_us .images {
+    max-width: 100%;
+  }
+  .join_us .images > *:not(:first-child) {
+    padding-left: 16px;
+  }
+  .join_us .content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

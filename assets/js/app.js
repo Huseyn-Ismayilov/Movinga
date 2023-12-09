@@ -10,22 +10,10 @@ $(window).scroll(function () {
 
 
 
-$('.toggle, .mobile_menu .close_btn').click(function () {
-	$('.mobile_menu').toggleClass('opened');
-	$('.nav_menu').toggleClass('opened');
-	$('.toggle').toggleClass('opened')
-
-});
-
-$('.mobile_menu .menu .dropdown .nav_link').click(function (e) {
-	$(this).next().toggleClass('opened');
-	return false;
-});
+// Mobile menu
 $('.mobile_menu .menu .back_btn').click(function (e) {
 	$(this).parent().removeClass('opened');
 });
-
-// end
 
 
 $(document).click(function (event) {
@@ -34,22 +22,7 @@ $(document).click(function (event) {
 		$('.site_header .toggle').removeClass('opened');
 	}
 });
-
-
-
-
-// var swiper = new Swiper(".content_slider .slider", {
-// 	slidesPerView: 1,
-// 	spaceBetween: 30,
-// 	pagination: {
-// 		el: ".content_slider .swiper-pagination",
-// 		clickable: true,
-// 	},
-// 	navigation: {
-// 		nextEl: ".content_slider .next_arrow ",
-// 		prevEl: ".content_slider .prev_arrow",
-// 	},
-// });
+// end
 
 
 // Show the first tab and hide the rest
@@ -67,7 +40,29 @@ $('#tabs-nav li').click(function () {
 	$(activeTab).fadeIn();
 	return false;
 });
+// End
 
-$('.top_header .language_select .trigger').click(function(){
+// Language select
+$('.top_header .language_select .trigger').click(function () {
 	$(this).parent().toggleClass('active')
 })
+
+
+
+
+// var swiper = new Swiper(".content_slider .slider", {
+// 	slidesPerView: 1,
+// 	spaceBetween: 30,
+// 	pagination: {
+// 		el: ".content_slider .swiper-pagination",
+// 		clickable: true,
+// 	},
+// 	navigation: {
+// 		nextEl: ".content_slider .next_arrow ",
+// 		prevEl: ".content_slider .prev_arrow",
+// 	},
+// });
+
+if ($(window).width() < 576) {
+	$('.site_header .contact_link .btn span').html('Jetzt anfragen')
+}
