@@ -63,6 +63,7 @@
         background-image: linear-gradient(142deg, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 0.3) 68%);
         background-repeat: no-repeat;
         padding: 16px 24px 8px;
+        backdrop-filter: blur(6px);
         background-color: rgba(255, 255, 255, 0.3);
         .form_wrap {
             display: flex;

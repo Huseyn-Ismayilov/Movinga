@@ -69,5 +69,5 @@ $('#tabs-nav li').click(function () {
 });
 
 $('.top_header .language_select .trigger').click(function(){
-	$(this).next().toggleClass('active')
+	$(this).parent().toggleClass('active')
 })

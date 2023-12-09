@@ -66,6 +66,18 @@
         }
         .language_select {
             position: relative;
+            &.active {
+                .trigger {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+                .dropdown {
+                    transform: translateX(-50%) scale(1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
             .trigger {
                 display: flex;
                 align-items: center;
@@ -75,11 +87,6 @@
                 cursor: pointer;
                 svg {
                     display: block;
-                }
-                &.active {
-                    svg {
-                        transform: rotate(90deg);
-                    }
                 }
             }
             .dropdown {
@@ -110,11 +117,6 @@
                             display: block;
                         }
                     }
-                }
-                &.active {
-                    transform: translateX(-50%) scale(1);
-                    opacity: 1;
-                    visibility: visible;
                 }
             }
         }
