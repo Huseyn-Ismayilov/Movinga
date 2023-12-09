@@ -1,0 +1,25 @@
+.site_footer {
+    .menu {
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            display: block;
+            padding: 6px 0;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@media (max-width: map.get($grid-breakpoints, "lg")) {
+    .site_footer {
+        padding: 100px 0;
+        .wrapper {
+            gap: 24px;
+        }
+        .col {
+            width: 100% !important;
+        }
+    }
+}
