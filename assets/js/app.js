@@ -73,6 +73,8 @@ $owl.owlCarousel({
 	center: true,
 	items: 3,
 	startPosition: 1,
+	touchDrag: false,
+	mouseDrag: false,
 	onInitialized: function (event) {
 		var $centerSlide = $(event.target).find('.owl-item.center').first().find('.owl-item');
 		var currentPosition = $centerSlide.attr('data-position');
