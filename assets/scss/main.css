@@ -847,7 +847,7 @@ button.swiper-pagination-bullet {
   left: 0;
   z-index: 98;
   width: 100%;
-  padding: 25px 0;
+  padding: 11px 0;
   transition: 0.1s;
 }
 .site_header.scroll_down {
@@ -875,6 +875,16 @@ button.swiper-pagination-bullet {
 .site_header .contact_link {
   text-align: right;
   color: var(--orange);
+}
+.site_header .contact_link p {
+  margin-top: 3px;
+}
+
+.top_header {
+  text-align: right;
+}
+.top_header .top_links a {
+  color: rgb(107, 113, 128);
 }
 
 .toggle {

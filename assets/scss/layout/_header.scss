@@ -4,7 +4,7 @@
     left: 0;
     z-index: 98;
     width: 100%;
-    padding: 25px 0;
+    padding: 11px 0;
     transition: 0.1s;
     &.scroll_down {
         top: 0;
@@ -31,6 +31,17 @@
     .contact_link {
         text-align: right;
         color: var(--orange);
+        p {
+            margin-top: 3px;
+        }
+    }
+}
+.top_header {
+    text-align: right;
+    .top_links {
+        a {
+            color: rgb(107, 113, 128);
+        }
     }
 }
 .toggle {
@@ -58,7 +69,7 @@
         height: 2px;
         margin: 3px 0;
         transform: none;
-        transition: .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 
         &::before {
             content: "";
@@ -80,10 +91,9 @@
             &:nth-child(1) {
                 transform: rotate(45deg);
                 margin-bottom: -5px;
-                &::before{
+                &::before {
                     width: 100%;
                 }
-
             }
 
             &:nth-child(3) {
