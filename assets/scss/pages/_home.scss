@@ -26,11 +26,9 @@
         padding-top: 48px;
         padding-left: 40px;
         h1 {
-            font-size: 43px;
             margin-bottom: 16px;
         }
         h2 {
-            font-size: 22px;
             font-weight: 300;
         }
         ul {
@@ -162,6 +160,7 @@
             bottom: 40px;
             position: relative;
             border-top-left-radius: 0;
+            padding: 24px 16px;
             .form_wrap {
                 flex-wrap: wrap;
             }
@@ -173,6 +172,17 @@
             }
             .reserv_count {
                 left: 0;
+            }
+        }
+    }
+}
+@media (max-width: 576px)  {
+    .hero {
+        .content {
+            > * {
+                &:not(h1) {
+                    display: none;
+                }
             }
         }
     }

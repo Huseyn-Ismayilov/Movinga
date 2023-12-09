@@ -1238,11 +1238,9 @@ button.swiper-pagination-bullet {
   padding-left: 40px;
 }
 .hero .content h1 {
-  font-size: 43px;
   margin-bottom: 16px;
 }
 .hero .content h2 {
-  font-size: 22px;
   font-weight: 300;
 }
 .hero .content ul li {
@@ -1372,6 +1370,7 @@ button.swiper-pagination-bullet {
     bottom: 40px;
     position: relative;
     border-top-left-radius: 0;
+    padding: 24px 16px;
   }
   .hero .search_bar .form_wrap {
     flex-wrap: wrap;
@@ -1384,6 +1383,11 @@ button.swiper-pagination-bullet {
   }
   .hero .search_bar .reserv_count {
     left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .hero .content > *:not(h1) {
+    display: none;
   }
 }
 .join_us {
