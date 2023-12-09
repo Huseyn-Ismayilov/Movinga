@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     left: 0;
-    z-index: 98;
+    z-index: 15;
     width: 100%;
     padding: 27px 0;
     transition: 0.1s;
@@ -41,10 +41,15 @@
             padding: 7px 14px;
         }
     }
+    .toggle {
+        margin-right: 16px;
+    }
 }
 .top_header {
     text-align: right;
     padding: 14px 0;
+    position: relative;
+    z-index: 16;
     .top_links {
         display: inline-flex;
         align-items: center;
@@ -60,13 +65,56 @@
             }
         }
         .language_select {
+            position: relative;
             .trigger {
                 display: flex;
                 align-items: center;
                 color: rgb(107, 113, 128);
                 font-weight: 500;
+                padding: 6px 16px;
+                cursor: pointer;
                 svg {
                     display: block;
+                }
+                &.active {
+                    svg {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .dropdown {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) scale(0.7);
+                top: 100%;
+                text-align: center;
+                min-width: 16px;
+                min-height: 16px;
+                padding: 8px 0;
+                background-color: white;
+                box-shadow:
+                    rgba(0, 0, 0, 0.2) 0px 5px 5px -3px,
+                    rgba(0, 0, 0, 0.14) 0px 8px 10px 1px,
+                    rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+                border-radius: 5px;
+                color: var(--orange);
+                z-index: 10;
+                transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                opacity: 0;
+                visibility: hidden;
+                ul {
+                    li {
+                        a {
+                            font-size: 16px;
+                            padding: 6px 16px;
+                            display: block;
+                        }
+                    }
+                }
+                &.active {
+                    transform: translateX(-50%) scale(1);
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -289,11 +337,11 @@
     // .mobile_menu {
     //     display: none;
     // }
-    // .site_header {
-    //     .toggle {
-    //         display: none;
-    //     }
-    // }
+    .site_header {
+        .toggle {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: map.get($grid-breakpoints, "lg")) {

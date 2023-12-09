@@ -27,11 +27,20 @@
         padding-left: 40px;
         h1 {
             font-size: 43px;
+            margin-bottom: 16px;
         }
         h2 {
             font-size: 22px;
             font-weight: 300;
         }
+        ul {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+    .image {
+        flex-shrink: 0;
     }
     .list {
         margin-top: 24px;
@@ -50,6 +59,7 @@
         width: 100%;
         bottom: 120px;
         border-radius: 10px;
+        border-top-right-radius: 0;
         background-image: linear-gradient(142deg, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 0.3) 68%);
         background-repeat: no-repeat;
         padding: 16px 24px 8px;
@@ -101,7 +111,7 @@
         .info_bar {
             display: flex;
             align-items: center;
-            padding: 10px 0;
+            padding-top: 16px;
             .item {
                 display: flex;
                 align-items: center;
@@ -112,10 +122,56 @@
                 text-align: center;
             }
         }
+        .reserv_count {
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(-100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6B7180;
+            padding: 6px 16px;
+            background-color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+    .content_box {
+        padding-top: 32px;
+        padding-bottom: 60px;
     }
 }
-@media (max-width:991px){
+@media (max-width: 991px) {
     .hero {
-        
+        .content {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 44px;
+            h2 {
+                display: none;
+            }
+        }
+        .image {
+            display: none;
+        }
+        .search_bar {
+            bottom: 40px;
+            position: relative;
+            border-top-left-radius: 0;
+            .form_wrap {
+                flex-wrap: wrap;
+            }
+            .info_bar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+                padding-top: 16px;
+            }
+            .reserv_count {
+                left: 0;
+            }
+        }
     }
 }

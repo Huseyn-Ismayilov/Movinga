@@ -67,3 +67,7 @@ $('#tabs-nav li').click(function () {
 	$(activeTab).fadeIn();
 	return false;
 });
+
+$('.top_header .language_select .trigger').click(function(){
+	$(this).next().toggleClass('active')
+})
