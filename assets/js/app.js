@@ -99,3 +99,22 @@ $(document).on('click', '.owl-item>div', function () {
 	var $speed = 200;
 	$owl.trigger('to.owl.carousel', [$(this).data('position'), $speed]);
 });
+
+// 
+
+$('.trust_pilot .slider').owlCarousel({
+	items: 1,
+	smartSpeed: 800,
+	nav: false,
+	dots: true
+});
+
+// Custom navigation events
+$('.owl-prev').click(function () {
+	$('.trust_pilot .slider').trigger('prev_arrow');
+});
+
+$('.owl-next').click(function () {
+	$('.trust_pilot .slider').trigger('next_arrow');
+});
+
