@@ -43,11 +43,9 @@ $('#tabs-nav li').click(function () {
 // End
 
 // Language select
-$('.top_header .language_select .trigger').click(function () {
+$('.language_select .trigger').click(function () {
 	$(this).parent().toggleClass('active')
 })
-
-
 
 
 // var swiper = new Swiper(".our_plans .slider", {

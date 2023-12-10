@@ -500,6 +500,25 @@
                 }
             }
         }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 33.333%;
+                min-width: 200px;
+            }
+            h3 {
+                font-size: 1.8755rem;
+                font-weight: 600;
+                color: var(--orange);
+                margin-bottom: 12px;
+            }
+            h6 {
+                font-size: 12px;
+                font-weight: 400;
+                color: black;
+            }
+        }
     }
 }
 @media (max-width: 991px) {
@@ -681,6 +700,7 @@
     }
 }
 .who_we_are {
+    padding: 50px 0;
     .sec_title {
         text-align: center;
         max-width: 624px;
@@ -691,6 +711,8 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 64px;
         .item {
+            border-bottom: 1px solid #6b718042;
+            padding-bottom: 20px;
             .title {
                 padding-left: 16px;
                 border-left: 4px solid var(--orange);
@@ -717,12 +739,13 @@
         max-width: 1260px;
         margin: 0 auto;
         padding: 64px 96px;
-        background: #F8F9FC;
+        background: #f8f9fc;
         border-radius: 10px;
-        box-shadow: 15px 15px 50px 0 rgba(51,101,138,0.09);
+        box-shadow: 15px 15px 50px 0 rgba(51, 101, 138, 0.09);
     }
 }
 .FAQs {
+    padding: 50px 0;
     .wrapper {
         max-width: 1080px;
         margin: 0 auto;
@@ -778,19 +801,184 @@
         }
     }
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
     .FAQs {
         #tabs-nav {
             width: 100%;
         }
         .content {
             width: 100%;
+            padding-left: 0;
         }
     }
     .section_group {
         .wrap {
             box-shadow: unset;
             padding: 0;
+            background-color: transparent;
         }
+    }
+}
+.discover_us {
+    .wrapper {
+        max-width: 1230px;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 15px 15px 50px 0 rgba(51, 101, 138, 0.13);
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .col {
+        width: 50%;
+    }
+    .content {
+        padding: 24px 40px;
+        padding-bottom: 0;
+        h3 {
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #6b7180;
+            margin-bottom: 16px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .discover_us {
+        .wrapper {
+            flex-direction: column-reverse;
+        }
+        .col {
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+            h3 {
+                font-size: 23px;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+.our_mission {
+    margin: 150px 0;
+    .wrapper {
+        max-width: 1230px;
+        margin: 0 auto;
+    }
+    .image {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        h1 {
+            position: absolute;
+            left: 56px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            max-width: 500px;
+        }
+        .icon {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+        }
+    }
+    .content {
+        display: flex;
+        gap: 64px;
+        padding: 100px 64px 32px;
+        position: relative;
+        > div {
+            width: 50%;
+        }
+        h4 {
+            font-style: italic;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        &::after {
+            content: "";
+            width: 70%;
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: black;
+            opacity: 0.15;
+        }
+    }
+    .content_box {
+        width: 100%;
+        max-width: 592px;
+        margin: 30px auto 0;
+        text-align: center;
+        position: relative;
+        .text {
+            background-size: contain;
+            background-image: url(../images/one-treeplanted-stats.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            padding: 32px;
+            padding-bottom: 8px;
+        }
+        h5 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        > * {
+            margin-bottom: 36px;
+        }
+        &::after {
+            content: "";
+            width: 70%;
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: black;
+            opacity: 0.15;
+        }
+    }
+    .items_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        padding: 50px 0;
+        .item {
+            .image {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .our_mission {
+        .items_list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .content {
+            flex-direction: column;
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .our_mission {
+        .items_list {
+            grid-template-columns: 1fr;
+        }
+
     }
 }
