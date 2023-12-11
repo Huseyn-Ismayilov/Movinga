@@ -7,8 +7,6 @@ $(window).scroll(function () {
 	}
 });
 
-
-
 // Mobile menu
 $('.mobile_menu .menu .back_btn').click(function (e) {
 	$(this).parent().removeClass('opened');

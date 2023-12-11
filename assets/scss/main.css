@@ -2262,14 +2262,18 @@ button.swiper-pagination-bullet {
   background-color: white;
   text-align: left;
   width: 100%;
+  box-shadow: 15px 15px 50px 0 rgba(51, 101, 138, 0.09);
+  border-radius: 10px;
+  overflow-x: auto;
   border-spacing: unset;
 }
 .FAQs .content table thead th {
   padding: 6px 16px;
+  line-height: 2;
   border-bottom: 1px solid rgb(224, 224, 224);
 }
 .FAQs .content table tbody td {
-  padding: 6px 16px;
+  padding: 7px 16px;
   line-height: 2;
   border-bottom: 1px solid rgb(224, 224, 224);
 }

@@ -812,16 +812,20 @@
             background-color: white;
             text-align: left;
             width: 100%;
+            box-shadow: 15px 15px 50px 0 rgba(51,101,138,0.09);
+            border-radius: 10px;
+            overflow-x: auto;
             border-spacing: unset;
             thead {
                 th {
                     padding: 6px 16px;
+                    line-height: 2;
                     border-bottom: 1px solid rgba(224, 224, 224, 1);
                 }
             }
             tbody {
                 td {
-                    padding: 6px 16px;
+                    padding: 7px 16px;
                     line-height: 2;
                     border-bottom: 1px solid rgba(224, 224, 224, 1);
                     &:first-child {
