@@ -6,10 +6,12 @@
     z-index: 1;
     .menu {
         display: inline-block;
-        width: 280px;
+        width: 220px;
+        margin-bottom: 24px;
         a {
             display: block;
-            padding: 6px 0;
+            padding: 2px 0;
+            line-height: 2;            
             &:hover {
                 text-decoration: underline;
             }
@@ -17,6 +19,9 @@
     }
     .title {
         max-width: 604px;
+        h1 {
+            font-size: 40px;
+        }
         &::after {
             content: "";
             width: 55px;
@@ -57,6 +62,9 @@
     }
     .block {
         padding-top: 36px;
+        &:first-child {
+            width: 40%;
+        }
         h5 {
             font-size: 0.75rem;
             font-weight: 500;
@@ -89,6 +97,14 @@
             .trigger {
                 color: white;
             }
+        }
+    }
+    .contact_links {
+        margin-bottom: 24px;
+        a {
+            display: block;
+            font-size: 1.8755rem;
+            font-weight: 800;
         }
     }
     .brands {
@@ -134,6 +150,16 @@
 }
 @media (max-width: map.get($grid-breakpoints, "lg")) {
     .site_footer {
+        .block {
+            &:first-child {
+                width: 100%;
+            }
+        }
+        .contact_links {
+            a {
+                font-size: 23px;
+            }
+        }
         .title {
             h1 {
                 font-size: 28px;
@@ -151,6 +177,11 @@
             }
             img {
                 margin: 0 16px;
+            }
+        }
+        .bottom {
+            .wrapper {
+                justify-content: center;
             }
         }
         .wrapper {
