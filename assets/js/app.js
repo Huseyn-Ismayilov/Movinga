@@ -8,8 +8,8 @@ $(window).scroll(function () {
 });
 
 // Mobile menu
-$('.mobile_menu .menu .back_btn').click(function (e) {
-	$(this).parent().removeClass('opened');
+$('.site_header .toggle').click(function (e) {
+	$('.mobile_menu').toggleClass('opened');
 });
 
 
