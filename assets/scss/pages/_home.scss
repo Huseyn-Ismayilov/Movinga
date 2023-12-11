@@ -214,9 +214,8 @@
             max-width: 25%;
             object-fit: contain;
             overflow: hidden;
-            &:not(:first-child) {
-                padding-left: 32px;
-            }
+            padding-left: 32px;
+
         }
         .trustPilot {
             text-align: center;
@@ -241,9 +240,13 @@
     .join_us {
         .images {
             max-width: 100%;
+            gap: 32px;
             > * {
                 &:not(:first-child) {
-                    padding-left: 16px;
+                    padding-left: 0 !important;
+                }
+                &:first-child {
+                    padding-left: 0;
                 }
             }
         }
@@ -282,7 +285,6 @@
         &.center {
             opacity: 1;
             z-index: 2;
-            margin: 0 -10px;
             .plan_item {
                 border-color: var(--orange);
                 transform: scale(1.1);
@@ -752,6 +754,7 @@
     }
     .sec_title {
         width: 100%;
+        margin-bottom: 48px;
         h4 {
             color: var(--orange);
         }
@@ -762,11 +765,23 @@
         flex-wrap: wrap;
     }
     #tabs-nav {
-        width: 41.666667%;
+        width: 35%;
+        li {
+            a {
+                transition: 0s;
+            }
+            &.active {
+                a {
+                    font-weight: 600;
+                }
+            }
+           
+        }
     }
     .content {
-        width: 58.333333%;
+        width: 65%;
         padding-left: 64px;
+        padding-right: 76px;
         h3 {
             margin-bottom: 24px;
         }
@@ -809,6 +824,7 @@
         .content {
             width: 100%;
             padding-left: 0;
+            padding-right: 0;
         }
     }
     .section_group {
@@ -979,6 +995,120 @@
         .items_list {
             grid-template-columns: 1fr;
         }
+    }
+}
 
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .15s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    .inner {
+        background-color: white;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 583px;
+    }
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 10px;
+        .text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .closeBtn {
+            cursor: pointer;
+            svg {
+                display: block;
+            }
+        }
+    }
+    .content {
+        text-align: center;
+        padding: 32px 32px 0px;
+    }
+    form {
+        padding: 32px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 36px;
+        .form_item {
+            width: 100%;
+            height: 56px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(201, 201, 201);
+            padding: 16px;
+            border-radius: 4px;
+        }
+    }
+    .imgs {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding: 48px 0 24px;
+        img {
+            max-width: 60px;
+            max-height: 30px;
+            object-fit: contain;
+        }
+    }
+    // .checkbox {
+    //     // padding: 0 30px;
+    // }
+    &.active {
+        opacity: 1;
+        visibility: visible ;
+    }
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 16px;
+    input {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #B2B5BE;
+        border-radius: 4px;
+        appearance: unset;
+        flex-shrink: 0;
+        background-position: center;
+        &:checked {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06' focusable='false' aria-hidden='true' viewBox='0 0 24 24' data-testid='CheckBoxIcon' width='20'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'%3E%3C/path%3E%3C/svg%3E");
+            border-color: transparent;
+            opacity: .6;
+        }
+    }
+    label {
+        font-size: 12px;
+    }
+}
+@media (max-width:991px) {
+    .popup {
+        .inner {
+            height: 100%;
+            max-width: 100%;
+            border-radius: 0;
+        }
+        form {
+            grid-template-columns: 1fr;
+        }
+        .btn {
+            width: 100%;
+        }
     }
 }

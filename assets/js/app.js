@@ -1,10 +1,9 @@
 $(window).scroll(function () {
 	var scroll = $(window).scrollTop();
-
-	if (scroll >= 60) {
-		$(".site_header").addClass("scroll_down");
+	if (scroll >= 800) {
+		$(".sticky_header").addClass("scroll_down");
 	} else {
-		$(".site_header").removeClass("scroll_down");
+		$(".sticky_header").removeClass("scroll_down");
 	}
 });
 
@@ -37,7 +36,7 @@ $('#tabs-nav li').click(function () {
 	$('.tab-content').hide();
 
 	var activeTab = $(this).find('a').attr('href');
-	$(activeTab).fadeIn();
+	$(activeTab).show()
 	return false;
 });
 // End
@@ -106,7 +105,7 @@ owl.owlCarousel({
 	items: 1,
 	smartSpeed: 800,
 	nav: false,
-	dots: true, 
+	dots: true,
 });
 
 // Custom navigation events
@@ -118,3 +117,14 @@ $('.slider .owl-next').click(function () {
 	owl.trigger('next.owl.carousel');
 });
 
+
+
+$('.hero .search_bar .form_wrap .btn, .popup .top .closeBtn').click(function () {
+	$('.popup').toggleClass('active')
+})
+
+$(document).click(function (event) {
+	if (!$(event.target).closest(".popup .inner, .hero .search_bar .form_wrap .btn").length) {
+		$("body").find(".popup").removeClass("active");
+	}
+});
