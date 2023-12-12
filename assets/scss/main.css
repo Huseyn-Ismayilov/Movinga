@@ -2457,6 +2457,7 @@ button.swiper-pagination-bullet {
   border-radius: 8px;
   width: 100%;
   max-width: 583px;
+  overflow: hidden;
 }
 .popup .top {
   display: flex;
@@ -2478,6 +2479,7 @@ button.swiper-pagination-bullet {
 .popup .content {
   text-align: center;
   padding: 32px 32px 0px;
+  background-color: #F7F8FA;
 }
 .popup form {
   padding: 32px 0;
@@ -2508,6 +2510,15 @@ button.swiper-pagination-bullet {
 .popup.active {
   opacity: 1;
   visibility: visible;
+}
+
+.plan_modal h3 {
+  margin-bottom: 24px;
+}
+.plan_modal .text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .checkbox {

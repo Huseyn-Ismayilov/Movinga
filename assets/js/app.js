@@ -117,12 +117,17 @@ $('.slider .owl-next').click(function () {
 
 
 
-$('.hero .search_bar .form_wrap .btn, .popup .top .closeBtn').click(function () {
-	$('.popup').toggleClass('active')
+$('.hero .search_bar .btn, .popup .closeBtn, .sticky_header .form_wrap .btn').click(function () {
+	$('.popup.form').toggleClass('active')
+})
+
+
+$('.our_plans .plan_item .btn').click(function () {
+	$('.popup.plan_modal').toggleClass('active')
 })
 
 $(document).click(function (event) {
-	if (!$(event.target).closest(".popup .inner, .hero .search_bar .form_wrap .btn").length) {
+	if (!$(event.target).closest(".popup .inner, .btn").length) {
 		$("body").find(".popup").removeClass("active");
 	}
 });
